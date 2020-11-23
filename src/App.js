@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Header from './components/Header/index'
+import InputElements from './components/InputElements/index'
+import ListOfElements from './components/ListOfElements/index'
 
 function App() {
+  const [List, setList] = useState([])
+  const [countItems, setCountItems] = useState(0)
+
+  const addItem = (newItem) => {
+    if(newItem !== '')
+      setList([...List,{name:newItem, id:countItems}])
+      setCountItems(countItems+1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <InputElements AddNewItem={addItem}/>
+      <ListOfElements List={List} />
+    </>
+  )
 }
 
 export default App;
