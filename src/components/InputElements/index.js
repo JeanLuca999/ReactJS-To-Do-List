@@ -6,14 +6,14 @@ function InputElements({addItem}) {
     const [itemName, setItemName] = useState('')
 
     return(
-        <main className="container">
+        <main className="input-container">
             <input 
                 type="text"
-                className="text" value={itemName}
+                className="input-text" value={itemName}
                 onChange={event => setItemName(event.target.value)} />
             <button
                 type="button"
-                className="buttonAdd"
+                className="input-buttonAdd"
                 onClick={()=>addItem(itemName)}>
                 Add
             </button>
