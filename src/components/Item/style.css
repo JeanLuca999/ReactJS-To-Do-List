@@ -1,6 +1,21 @@
+.item-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 300px;
+    margin: 10px auto;
+
+    background-color: white;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 1px black;
+}
+
 .item-text {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    width: 150px;
     margin: 5px 10px;
 }
 
@@ -10,6 +25,6 @@
 }
 
 .checked {
-    background-color: green;
+    background-color: rgb(27, 204, 27);
     color: white;
 }

@@ -5,8 +5,8 @@ import './style.css'
 function Item({itemName, itemId, removeItem}) {
     const [checked, setChecked] = useState('')
     return(
-        <div>
-            <p className={'item-text' + checked}>
+        <div className={'item-container' + checked}>
+            <p className={'item-text'}>
                 {itemName}
             </p>
             <button
