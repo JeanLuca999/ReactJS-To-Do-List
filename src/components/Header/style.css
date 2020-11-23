@@ -1,0 +1,13 @@
+.Header {
+    background-color: #3B42D9;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0 4px 2px black;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 0 2px black;
+}

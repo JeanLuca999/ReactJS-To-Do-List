@@ -1,9 +1,10 @@
 import React from 'react'
+import './style.css' 
 
 function Header(){
     return (
-        <header>
-            <h1>To Do List - React</h1>
+        <header className="Header">
+            <h1 className="title">To Do List - React</h1>
         </header>
     )
 }

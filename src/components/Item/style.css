@@ -1,0 +1,15 @@
+.item-text {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 5px 10px;
+}
+
+.item-button-remove, .item-button-check {
+    background-color: transparent;
+    border: none;
+}
+
+.checked {
+    background-color: green;
+    color: white;
+}
