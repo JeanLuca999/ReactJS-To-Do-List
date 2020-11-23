@@ -12,11 +12,15 @@ function App() {
       setList([...List,{name:newItem, id:countItems}])
       setCountItems(countItems+1)
   }
+
+  const removeItem = (id) => {
+    setList(List.filter(item => item.id !== id))
+  }
   return (
     <>
       <Header />
-      <InputElements AddNewItem={addItem}/>
-      <ListOfElements List={List} />
+      <InputElements addItem={addItem}/>
+      <ListOfElements List={List} removeItem={removeItem}/>
     </>
   )
 }

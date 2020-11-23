@@ -1,10 +1,13 @@
 import React from 'react'
+import Item from '../Item/index'
 
-function ListOfElements({List}) {
+function ListOfElements({List, removeItem}) {
     return(
         <section>
             <ul>
-                {List.map(item => <li key={item.id}>{item.name}</li>)}
+                {List.map(item =>
+                    <Item key={item.id} itemName={item.name} itemId={item.id} removeItem={removeItem} />)
+                }
             </ul>
         </section>
     )

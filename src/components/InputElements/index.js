@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function InputElements({AddNewItem}) {
+function InputElements({addItem}) {
     const [itemName, setItemName] = useState('')
 
     return(
@@ -11,7 +11,7 @@ function InputElements({AddNewItem}) {
                 onChange={(event)=>setItemName(event.target.value)} />
             <button
                 type="button"
-                onClick={()=>AddNewItem(itemName)}>
+                onClick={()=>addItem(itemName)}>
                 Add
             </button>
         </main>
